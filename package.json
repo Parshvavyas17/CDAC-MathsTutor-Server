@@ -4,22 +4,24 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "dev": "nodemon index.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/github.com/Parshvavyas17.git"
+    "url": "git+https://github.com/Parshvavyas17/CDAC-MathsTutor-Server.git"
   },
   "author": "CDAC",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/github.com/Parshvavyas17/issues"
+    "url": "https://github.com/Parshvavyas17/CDAC-MathsTutor-Server.git/issues"
   },
-  "homepage": "https://github.com/github.com/Parshvavyas17#readme",
+  "homepage": "https://github.com/Parshvavyas17/CDAC-MathsTutor-Server.git#readme",
   "dependencies": {
     "bcrypt": "^5.1.0",
     "cors": "^2.8.5",
-    "dot-env": "^0.0.1",
+    "dotenv": "^16.0.3",
     "express": "^4.18.2",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^6.8.0",
