@@ -1,25 +1,18 @@
-const Polynomial = require("../models/polynomial.model");
+const Logarithmic = require("../models/logarithmic.model");
 
-const generatePolynomial = async (req, res) => {
+const generateLogarithmic = async (req, res) => {
   try {
-    const polynomial = new Polynomial({
-      question: {
-        coefX2: 3,
-        coefX1: 2,
-        coefX0: 1,
-      },
-      answer: {
-        coefX3: 1,
-        coefX2: 1,
-        coefX1: 1,
-      },
+    const logarithmic = new Logarithmic({
+      question: "logx",
+      answer: "1/x",
       hints: ["Hint 1", "Hint 2", "Hint 3"],
       formulae: ["First Formula", "Second Formula"],
       upperLimit: 1,
       lowerLimit: 1,
+      finalAns: 0,
     });
-    await polynomial.save();
-    res.status(201).send(polynomial);
+    await logarithmic.save();
+    res.send(logarithmic);
   } catch (error) {
     console.log(error);
   }
@@ -27,7 +20,7 @@ const generatePolynomial = async (req, res) => {
 
 const randomQuestion = async (req, res) => {
   try {
-    const questions = await Polynomial.find({});
+    const questions = await Logarithmic.find({});
     if (questions.length === 0) {
       return res
         .status(200)
@@ -43,4 +36,4 @@ const randomQuestion = async (req, res) => {
   }
 };
 
-module.exports = { randomQuestion, generatePolynomial };
+module.exports = { randomQuestion, generateLogarithmic };

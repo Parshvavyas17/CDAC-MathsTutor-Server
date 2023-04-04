@@ -1,12 +1,12 @@
 const express = require("express");
 const {
   randomQuestion,
-  generatePolynomial,
-} = require("../controllers/polynomial.controller");
+  generateTrigonometric,
+} = require("../controllers/trigonometric.controller");
 
 const router = express.Router();
 
-router.post("/", generatePolynomial);
+router.post("/", generateTrigonometric);
 
 router.get("/", randomQuestion);
 
